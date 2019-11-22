@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LearnIt - Menu</title>
+    <link rel="stylesheet" href="../../styles/main_style.css">
+    <link rel="stylesheet" href="../styles/articles.css">
+    <link rel="stylesheet" href="../../styles/preloader.css">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../img/favicon.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../../scripts/js/script.js"></script>
+</head>
+
+<body>
+    <aside class="advertisement">
+        <p class="advertisement_arrow">&lt;</p>
+        <a href="https://www.cocacola.com">
+            <img src="https://carbonmade-media.accelerator.net/37503708;640x256.jpeg" alt="">
+        </a>
+    </aside>
+    <header class="menu">
+        <!--#logo+.options+#search_bar_holder>input#search_bar+input:submit-->
+        <div id="logo">
+            <a href="../../index.html">
+                <span>l</span>
+                <span>e</span>
+                <span>a</span>
+                <span>r</span>
+                <span>n</span>
+                <span>.</span>
+                <span>i</span>
+                <span>t</span>
+            </a>
+        </div>
+        <div class="options">
+            <div class="dropdown">
+                <a class="button" href="../../index.html">
+                    <i class="icon fa fa-home"></i>
+                    <div class="label">
+                        home
+                    </div>
+                </a>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="../index.html">
+                    <i class="icon fa fa-file-o"></i>
+                    <div class="label">
+                        articles
+                    </div>
+                </a>
+                <ul class="dropdown_content">
+                    <div class="dropdown">
+                        <a href="" class="button">
+                            <li>CSS Layouts</li>
+                        </a>
+                        <ul class="dropdown_content">
+                            <a href="../../articles/CSS_Grid_Layout/index.html" class="button">
+                                <li>CSS Grid Layout</li>
+                            </a>
+                            <a href="../../articles/Flexbox/index.html" class="button">
+                                <li>Flexbox</li>
+                            </a>
+                            <a href="../../articles/Responsive/index.html" class="button">
+                                <li>Responsive Layout</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a href="" class="button">
+                            <li>Basic CSS</li>
+                        </a>
+                        <ul class="dropdown_content">
+                            <a href="../../articles/Box_Model/index.html" class="button">
+                                <li>Box Model</li>
+                            </a>
+                            <a href="../../articles/Selectors/index.html" class="button">
+                                <li>Selectors</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a href="" class="button">
+                            <li>Complex HTML components</li>
+                        </a>
+                        <ul class="dropdown_content">
+                            <a href="../../articles/Forms/index.html" class="button">
+                                <li>Forms</li>
+                            </a>
+                            <a href="../../articles/Menu/index.html" class="button">
+                                <li>Menu</li>
+                            </a>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="../../projects/index.html">
+                    <i class="icon fa fa-code"></i>
+                    <div class="label">
+                        projects
+                    </div>
+                </a>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="../../contact/index.html">
+                    <i class="icon fa fa-user"></i>
+                    <div class="label">
+                        contact
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="search_bar_holder">
+            <form action="../../scripts/php/search.php" method="POST">
+                <input type="text" name="search_bar" id="search_bar" placeholder="Float layout">
+                <button type="submit" value="">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <div id="menu_button">
+            <button>
+                <i class="icon fa fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <main>
+        <aside class="index">
+            <!--ul>a{Título $}*5>li-->
+            <div class="index_container">
+                <a href="#title_1">Responsive</a>
+            </div>
+            <div class="index_container">
+                <a href="#elements">Elements</a>
+            </div>
+            <div class="index_container">
+                <a href="#related">Related pseudo-classes</a>
+            </div>
+            <div class="index_container">
+                <a href="#types">Types of Input</a>
+            </div>
+            <div class="index_container">
+                <a href="#example">Example</a>
+            </div>
+        </aside>
+        <div class="header">
+            <img src="../../img/cover/menu.jpeg">
+        </div>
+        <div class="content">
+            <article>
+                <br />
+                <h1 id="title_1">Menu</h1>
+                <h4>A menu is a collection of links that provides the user with a navigation guide</h4>
+                <br />
+                <br>
+                <button onclick="goToURL('../../examples/menu/index.html')"
+                    onauxclick="goToURL('../../examples/menu/index.html')">View live</button>
+                <button onclick="goToURL('https:/\/codepen.io/r4pepe/pen/yLLwooJ')"
+                    onauxclick="goToURL('https:/\/codepen.io/r4pepe/pen/yLLwooJ')">View Demo</button>
+                <br>
+                <br>
+                <p>Having easy-to-use navigation is important for any web site.
+                    <br> Before teaching menus we need to know how to create a basic structure to help us style it.
+                </p>
+                <br>
+                <h2 id="elements">Basic structure</h2>
+                <br>
+                <p>
+                    We usually use lists, unordenated lists to be more precise, and the items are list items or lis,
+                    this way nesting makes sense
+                    <br>
+
+                    <pre>
+        &lt;ul>
+            &lt;li>Item 1&lt;/li>
+            &lt;li>Item 2
+                &lt;ul>
+                    &lt;li>SubItem 1&lt;/li>
+                    &lt;li>SubItem 2&lt;/li>
+                    &lt;li>SubItem 3&lt;/li>
+                    &lt;li>SubItem 4&lt;/li>
+                &lt;/ul>
+            &lt;/li>
+            &lt;li>Item 3&lt;/li>
+            &lt;li>Item 4&lt;/li>
+        &lt;/ul>
+</pre>
+                    <br><br> But this only gives us the structure, let's say our menu will be horizontal, so but lists
+                    are displayed vertical, we must add the following line to fix that: <span class="element">li {
+                        display: inline-block; }</span> then we must hide the submenus with something like <span
+                        class="element">ul ul { display: none; }</span> and it will show whenever we hover a list item
+                    that has an ul inside with something like
+                    <span class="element">ul li:hover ul, ul:hover { display: block; }
+                    </span>
+                </p>
+                <br>
+                <p>Now we have a menu that has a dropdown menu, but the second one doesn't display as it should, for
+                    that it's commonly used the <span class="element">position: absolute;</span></p>
+                <br><br>
+                <p>Following these steps you may have a menu looking this way:</p>
+                <br>
+                <br>
+                <iframe height="265" style="width: 100%;" scrolling="no" title="Baabgzm"
+                    src="https://codepen.io/r4pepe/embed/Baabgzm?height=265&theme-id=default&default-tab=html,result"
+                    frameborder="no" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href='https://codepen.io/r4pepe/pen/Baabgzm'>Baabgzm</a> by Pepe
+                    (<a href='https://codepen.io/r4pepe'>@r4pepe</a>) on <a href='https://codepen.io'>CodePen</a>.
+                </iframe>
+                <br>
+                <br>
+                <p>This provided us with the structure, we could now style it so it looks more appealing following what
+                    we learned on the other articles</p>
+                <br><br>
+                <iframe height="265" style="width: 100%;" scrolling="no" title="dyyrBJO"
+                    src="https://codepen.io/r4pepe/embed/dyyrBJO?height=265&theme-id=default&default-tab=css,result"
+                    frameborder="no" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href='https://codepen.io/r4pepe/pen/dyyrBJO'>dyyrBJO</a> by Pepe
+                    (<a href='https://codepen.io/r4pepe'>@r4pepe</a>) on <a href='https://codepen.io'>CodePen</a>.
+                </iframe>
+                <br>
+                <br>
+                <h2 id="example">Example</h2>
+                <br>
+                <p>This example is what we could get if we put more time, not ours but as a showcase</p>
+                <br>
+                <br>
+                <iframe height="265" style="width: 100%;" scrolling="no" title="Menu Example"
+                    src="https://codepen.io/r4pepe/embed/yLLwooJ?height=265&theme-id=default&default-tab=css,result"
+                    frameborder="no" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href='https://codepen.io/r4pepe/pen/yLLwooJ'>Menu Example</a> by Pepe
+                    (<a href='https://codepen.io/r4pepe'>@r4pepe</a>) on <a href='https://codepen.io'>CodePen</a>.
+                </iframe>
+                <br>
+                <br>
+                <br>
+                <br>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="social_networks">
+
+            <a href="https://www.twitter.com/learn_it">
+                <i class="fa fa-twitter"></i>
+                <p>Twitter</p>
+            </a>
+            <a href="https://www.instagram.com/learn_it">
+                <i class="fa fa-instagram"></i>
+                <p>Instagram</p>
+            </a>
+            <a href="https://www.codepen.com/learn_it">
+                <i class="fa fa-codepen"></i>
+                <p>Code Pen</p>
+            </a>
+            <a href="https://www.facebook.com/learn_it">
+                <i class="fa fa-facebook"></i>
+                <p>Facebook</p>
+            </a>
+        </div>
+        <div class="copy">
+            Pepe Fabra Valverde &copy;2019&nbsp;
+        </div>
+    </footer>
+</body>
+
+</html>

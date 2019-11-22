@@ -1,0 +1,85 @@
+.content ul {
+    list-style-type: square;
+    padding-left: 4em;
+}
+
+.content li {
+    text-align: left;
+    text-align-last: left;
+    margin: 0.5vh 0;
+}
+
+.content li::before {
+    content: ">";
+}
+
+.tabbed_content {
+    padding-left: 4em;
+}
+
+.content p, .content li, .element {
+    line-height: 1.5em;
+}
+
+.element {
+    background: linear-gradient(to left, rgb(218, 218, 218), rgb(151, 127, 138));
+    border-radius: 0.5vh;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.element:hover {
+    color: #e91e63;
+}
+
+.element:active {
+    font-size: 1.25em;
+}
+
+.content a, .element {
+    font-size: 1em;
+}
+
+.content pre {
+    text-align-last: left;
+    padding: 1em 0;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.content pre {
+    text-align-last: left;
+    padding: 1em 0;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+/*.content pre:nth-child(odd) {
+    background: rgba(255, 166, 0, 0.35);
+}
+
+.content pre:nth-child(even) {
+    background: rgba(30, 143, 255, 0.35);
+}*/
+
+.HTML_CSS {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.code_container {
+    flex: 45%;
+    margin: 0 2.5%;
+}
+
+.bg_image {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    z-index: -1;
+    background-image: url("../../img/triangles-download.svg");
+    opacity: 0.3;
+    filter: contrast(2.5), brightness(3), blur(1vh), saturate(0);
+    left: -10%;
+    top: -10%;
+}
+

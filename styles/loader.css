@@ -1,0 +1,74 @@
+/* #region LOADER*/
+
+.loaded .pre_loader {
+    display: none;
+}
+
+.pre_loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    align-content: center;
+    justify-items: center;
+}
+
+.loading_text {
+    margin: auto;
+    font-size: 15vh;
+    text-align-last: center;
+    color: rgba(14, 17, 22, 0.15);
+    z-index: 4;
+    vertical-align: middle;
+    display: table-cell;
+    width: 100vw;
+    height: 100vh;
+}
+
+.circle {
+    align-self: center;
+    justify-content: center;
+    width: 3.5vh;
+    height: 3.5vh;
+    margin-left: 48.25vw;
+    z-index: 5;
+    border: 10px solid #b6b6b6;
+    border-top: 10px solid #4e4e4e;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* #endregion LOADER*/
+
+/*
+<div class="pre_loader">
+    <div class="circle"></div>
+    <div class="loading_text">Loading...</div>
+</div>
+*/

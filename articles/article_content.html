@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LearnIt - Formularies</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+    <link rel="stylesheet" href="styles/articles.css">
+    <link rel="shortcut icon" type="image/png" href="../img/favicon.png">
+    <script src="../scripts/js/script.js"></script>
+    <style>
+        .menu,
+        footer {
+            background: transparent;
+        }
+
+        main {
+            grid-template-areas: "index content""index content";
+        }
+    </style>
+</head>
+
+<body>
+    <header class="menu">
+        span.element
+    </header>
+    <main>
+        <aside class="index">
+            <!--ul>a{Título $}*5>li-->
+            <div class="index_container">
+                <a href="#title_1">Responsive</a>
+            </div>
+            <div class="index_container">
+                <a href="#elements">Elements</a>
+            </div>
+            <div class="index_container">
+                <a href="#related">Related pseudo-classes</a>
+            </div>
+            <div class="index_container">
+                <a href="#types">Types of Input</a>
+            </div>
+            <div class="index_container">
+                <a href="#example">Example</a>
+            </div>
+        </aside>
+        <div class="header">
+        </div>
+        <div class="content">
+            <article>
+                <br />
+                <h1 id="title_1">Menu</h1>
+                <h4>Having easy-to-use navigation is important for any web site</h4>
+                <br />
+                <br>
+                <button onclick="goToURL('../../examples/menu/index.html')"
+                    onauxclick="goToURL('../../examples/menu/index.html')">View live</button>
+                <button onclick="goToURL('https:/\/codepen.io/r4pepe/pen/yLLwooJ')"
+                    onauxclick="goToURL('https:/\/codepen.io/r4pepe/pen/yLLwooJ')">View Demo</button>
+                <br>
+                <br>
+                <p>A form is made of elements, and the form header, let's talk about the form header first.
+                    <br>
+                    <br>
+                    <ul>
+                        <li><span class="element">action</span>the file that will be loaded</li>
+                        <li><span class="element">method</span>: <span class="element">POST</span>, more secure, no size
+                            limit and <span class="element">GET</span> sizie limit of around 3000 characters and
+                            non-secure but can be bookmarked</li>
+                        <li><span class="element">enctype="multipart/form-data"</span>: this is necessary if we're using
+                            <span class="element">input:file</span> and <span class="element">method="POST"</span></li>
+                        <li><span class="element">target</span>: where will the action load on? This allows us to choose
+                            from some options:
+                            <ul>
+                                <li><span class="element">_blank</span>: the response is displayed in a new window or
+                                    tab</li>
+                                <li><span class="element">_self</span>: the response is displayed in the same frame
+                                    (this is default)</li>
+                                <li><span class="element">_parent</span>: the response is displayed in the parent frame
+                                </li>
+                                <li><span class="element">_top</span>: the response is displayed in the full body of the
+                                    window</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form action="" target=""></form>
+                </p>
+                <br>
+                <h2 id="elements">Elements</h2>
+                <br>
+                <ul>
+                    <li><span class="element">input</span>: specifies an input field where the user can enter data</li>
+                    <li><span class="element">textarea</span>: defines a multi-line text input control</li>
+                    <li><span class="element">button</span>: defines a clickable button, inside a <span
+                            class="element">button</span> element you can put content, like text or images</li>
+                    <li><span class="element">select</span>: used to create a drop-down list</li>
+                    <li><span class="element">option</span>: defines an option in a select list</li>
+                    <li><span class="element">optgroup</span>: used to group related options in a drop-down list</li>
+                    <li><span class="element">fieldset</span>: used to group related elements in a form, such as inputs
+                    </li>
+                    <li><span class="element">label</span>: defines a label for a form element</li>
+                    <li><span class="element">output</span>: represents the result of a calculation (like one performed
+                        by a script)</li>
+                </ul>
+
+                <h2 id="related">Related pseudo-classes</h2>
+                <p>
+                    Here's a list of some commonly used classes in form elements:
+                    <br><br>
+                    <ul>
+                        <li><span class="element">:focus</span>: when the input is focused</li>
+                        <li><span class="element">:placeholder-shown</span>: when the placeholder is shown</li>
+                        <li><span class="element">:not(:placeholder-shown)</span>: when the placeholder is not shown
+                            because is focus or has text</li>
+                        <li><span class="element">:active</span>: on-click</li>
+                        <li><span class="element">:checked</span>: selects every checked <span
+                                class="element">input</span> element
+                        <li><span class="element">:disabled</span>: selects every disabled <span
+                                class="element">input</span> element
+                        <li><span class="element">:enabled</span>: selects every enabled <span
+                                class="element">input</span> element
+                        <li><span class="element">:in-range</span>range : selects <span class="element">input</span>
+                            elements with a value within a specified range
+                        <li><span class="element">:invalid</span>: selects all <span class="element">input</span>
+                            elements with an invalid value
+                        <li><span class="element">:optional</span>: selects <span class="element">input</span> elements
+                            with no "required" attribute
+                        <li><span class="element">:out-of-range</span>: selects <span class="element">input</span>
+                            elements with a value outside a specified range
+                        <li><span class="element">:read-only</span>: selects <span class="element">input</span> elements
+                            with a "readonly" attribute specified
+                        <li><span class="element">:read-write</span>: selects <span class="element">input</span>
+                            elements with no "readonly" attribute
+                        <li><span class="element">:required</span>: selects <span class="element">input</span> elements
+                            with a "required" attribute specified
+                        <li><span class="element">:valid</span>: selects all <span class="element">input</span> elements
+                            with a valid value
+                    </ul>
+
+                </p>
+                <h2 id="types">Types of Input</h2>
+                <br>
+                <p>
+                    You can style inputs of a certain type using <a href="../Selectors/index.html">CSS selectors</a> to
+                    do something like <span class="element">input[type="submit"]</span> so here's a list of every input
+                    in the <span class="element"></span>HTML DOM</span> reference:
+                    <ul>
+                        <li>Input Button</li>
+                        <li>Input Checkbox</li>
+                        <li>Input Color</li>
+                        <li>Input Date</li>
+                        <li>Input Datetime</li>
+                        <li>Input DatetimeLocal</li>
+                        <li>Input Email</li>
+                        <li>Input FileUpload</li>
+                        <li>Input Hidden</li>
+                        <li>Input Image</li>
+                        <li>Input Month</li>
+                        <li>Input Number</li>
+                        <li>Input Password</li>
+                        <li>Input Range</li>
+                        <li>Input Radio</li>
+                        <li>Input Reset</li>
+                        <li>Input Search</li>
+                        <li>Input Submit</li>
+                        <li>Input Text</li>
+                        <li>Input Time</li>
+                        <li>Input URL</li>
+                        <li>Input Week</li>
+                    </ul>
+                </p>
+                <br><br>
+                <h2 id="example">Example</h2>
+                <br>
+                <br>
+                <iframe height="265" style="width: 100%;" scrolling="no" title="Menu Example"
+                    src="https://codepen.io/r4pepe/embed/yLLwooJ?height=265&theme-id=default&default-tab=css,result"
+                    frameborder="no" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href='https://codepen.io/r4pepe/pen/yLLwooJ'>Menu Example</a> by Pepe
+                    (<a href='https://codepen.io/r4pepe'>@r4pepe</a>) on <a href='https://codepen.io'>CodePen</a>.
+                </iframe>
+                <br>
+                <br>
+                <br>
+                <br>
+            </article>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html

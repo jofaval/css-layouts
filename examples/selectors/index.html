@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selectors Example</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!--https://dev.to/emmawedekind/css-specificity-1kca-->
+    <br>
+    <div id="counter">
+        <div class="digit" id="digit1" title="Style Attribute">0</div>
+        <div class="digit" id="digit2" title="ID">0</div>
+        <div class="digit" id="digit3" title="Class, Pseudo-Class, Attribute">0</div>
+        <div class="digit" id="digit4" title="Elements, Pseudo-Elements">0</div>
+    </div>
+    <br>
+    <div style="height: 3rem;">
+        <p style="float: left;"><b>Highest specifity</b></p>
+        <p style="float: right;"><b>Lowest specifity</b></p>
+    </div>
+    <br>
+    <div class="tryOwn">
+        <h3>Try your own selection</h3>
+        <br>
+        <div class="flex_container">
+            <input type="text" id="selectorCSS" placeholder="element > element">
+            <button id="btnSelectorCSS">Calculate</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h3>Examples</h3>
+    <br>
+    <div class="options">
+        <button points="0002">
+            <pre>ul &gt; li { background: red; }</pre>
+        </button>
+        <button points="0101">
+            <pre>ul &gt; #listItem { background: gray; }</pre>
+        </button>
+        <button points="0200">
+            <pre>#list &gt; #listItem { background: blue; }</pre>
+        </button>
+        <button points="0110">
+            <pre>#list &gt; .listItem { background: black; }</pre>
+        </button>
+        <button points="0020">
+            <pre>.list &gt; .listItem { background: green; }</pre>
+        </button>
+        <button points="0113">
+            <pre>ul &gt; #listItem a:hover ul { background: yellow; }</pre>
+        </button>
+        <button points="1000">
+            <pre>&lt;ul&gt;&lt;li style="background: orange;"&gt;&lt;/li&gt;&lt;/ul&gt;</pre>
+        </button>
+    </div>
+</body>
+
+</html>

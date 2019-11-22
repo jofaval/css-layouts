@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LearnIt - Home page</title>
+    <link rel="stylesheet" href="styles/main_style.css">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="img/favicon.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/home.css">
+    <script src="./scripts/js/script.js"></script>
+</head>
+
+<body>
+    <aside class="advertisement">
+        <p class="advertisement_arrow">&lt;</p>
+        <a href="https://www.cocacola.com">
+            <img src="https://carbonmade-media.accelerator.net/37503708;640x256.jpeg" alt="">
+        </a>
+    </aside>
+    <header class="menu">
+        <!--#logo+.options+#search_bar_holder>input#search_bar+input:submit-->
+        <div id="logo">
+            <a href="#">
+                <span>l</span>
+                <span>e</span>
+                <span>a</span>
+                <span>r</span>
+                <span>n</span>
+                <span>.</span>
+                <span>i</span>
+                <span>t</span>
+            </a>
+        </div>
+        <div class="options">
+            <div class="dropdown">
+                <a class="button" href="./index.html">
+                    <i class="icon fa fa-home"></i>
+                    <div class="label">
+                        home
+                    </div>
+                </a>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="./articles/index.html">
+                    <i class="icon fa fa-file-o"></i>
+                    <div class="label">
+                        articles
+                    </div>
+                </a>
+                <ul class="dropdown_content">
+                    <div class="dropdown">
+                        <a href="" class="button">
+                            <li>CSS Layouts</li>
+                        </a>
+                        <ul class="dropdown_content">
+                            <a href="./articles/CSS_Grid_Layout/index.html" class="button">
+                                <li>CSS Grid Layout</li>
+                            </a>
+                            <a href="./articles/Flexbox/index.html" class="button">
+                                <li>Flexbox</li>
+                            </a>
+                            <a href="./articles/Responsive/index.html" class="button">
+                                <li>Responsive Layout</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a href="" class="button">
+                            <li>Basic CSS</li>
+                        </a>
+                        <ul class="dropdown_content">
+                            <a href="./articles/Box_Model/index.html" class="button">
+                                <li>Box Model</li>
+                            </a>
+                            <a href="./articles/Selectors/index.html" class="button">
+                                <li>Selectors</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a href="" class="button">
+                            <li>Complex HTML components</li>
+                        </a>
+                        <ul class="dropdown_content">
+                            <a href="./articles/Forms/index.html" class="button">
+                                <li>Forms</li>
+                            </a>
+                            <a href="./articles/Menu/index.html" class="button">
+                                <li>Menu</li>
+                            </a>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="./projects/index.html">
+                    <i class="icon fa fa-code"></i>
+                    <div class="label">
+                        projects
+                    </div>
+                </a>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="./contact/index.html">
+                    <i class="icon fa fa-user"></i>
+                    <div class="label">
+                        contact
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="search_bar_holder">
+            <form action="./scripts/php/search.php" method="POST">
+                <input type="text" name="search_bar" id="search_bar" placeholder="Float layout">
+                <button type="submit" value="">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <div id="menu_button">
+            <button>
+                <i class="icon fa fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <main>
+        <aside class="index">
+            <!--ul>a{Elemento $}*5>li-->
+            <div class="index_container">
+                <a href="./articles/Box_Model/index.html">Box Model</a>
+            </div>
+            <div class="index_container">
+                <a href="./articles/Selectors/index.html">Selectors</a>
+            </div>
+            <div class="index_container">
+                <a href="./articles/Flexbox/index.html">Flexbox Layout</a>
+            </div>
+            <div class="index_container">
+                <a href="./articles/CSS_Grid_Layout/index.html">CSS Grid Layout</a>
+            </div>
+            <div class="index_container">
+                <a href="./articles/Responsive/index.html">Responsive with CSS Grid</a>
+            </div>
+            <div class="index_container">
+                <a href="./articles/Forms/index.html">Forms</a>
+            </div>
+            <div class="index_container">
+                <a href="./articles/Menu/index.html">Menu</a>
+            </div>
+        </aside>
+        <div class="header">
+            <!--img src="https://picsum.photos/1600/180?random=1"-->
+            <img src="./img/cover/forms.jpeg" alt="">
+        </div>
+        <div class="content">
+            <!--#izq+(article>img.article_cover_img+p.article_description)+#der-->
+            <div id="slider">
+                <!--(.element#elem_$>a.arr[href=#elem_$]+section+a.arr[href=#elem_$])*5-->
+                <div class="element" id="welcome">
+                    <a href="#get_started" class="arr">&lt;</a>
+                    <section>
+                        <div>
+                            <h2>Welcome to the page</h2>
+                            <br>
+                            <p>Get ready to ready <b>learn it!</b></p>
+                        </div>
+                    </section>
+                    <a href="#learnit" class="arr">&gt;</a>
+                </div>
+                <div class="element" id="learnit">
+                    <a href="#welcome" class="arr">&lt;</a>
+                    <section>
+                        <div>
+                            <h2>Learn it</h2>
+                            <br>
+                            <p>Learn it is a website with the focus of teaching CSS, from the basics of how it works to
+                                how to create advanced layouts or styling elements only at specific behaviours</p>
+                        </div>
+                    </section>
+                    <a href="#get_started" class="arr">&gt;</a>
+                </div>
+                <div class="element" id="get_started">
+                    <a href="#learnit" class="arr">&lt;</a>
+                    <section>
+                        <div>
+                            <h2>We have tutorials</h2>
+                            <br>
+                            <p>Yes, we do! And they are organized so it's a step by step progression</p>
+                            <br>
+                            <button onclick="goToURL('./articles/Box_Model/index.html')">Get started!</button>
+                        </div>
+                    </section>
+                    <a href="#welcome" class="arr">&gt;</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social_networks">
+            <a href="https://www.twitter.com/learn_it">
+                <i class="fa fa-twitter"></i>
+                <p>Twitter</p>
+            </a>
+            <a href="https://www.instagram.com/learn_it">
+                <i class="fa fa-instagram"></i>
+                <p>Instagram</p>
+            </a>
+            <a href="https://www.codepen.com/learn_it">
+                <i class="fa fa-codepen"></i>
+                <p>Code Pen</p>
+            </a>
+            <a href="https://www.facebook.com/learn_it">
+                <i class="fa fa-facebook"></i>
+                <p>Facebook</p>
+            </a>
+        </div>
+        <div class="copy">
+            Pepe Fabra Valverde &copy;2019&nbsp;
+        </div>
+    </footer>
+</body>
+
+</html>

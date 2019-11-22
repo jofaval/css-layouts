@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Example</title>
+    <script>
+        function updateTextInput(val) {
+            //document.getElementById('textInput').innerText = val;
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <form action="" method="POST">
+        <p>Personal data</p>
+        <fieldset>
+            <div class="special_input">
+                <input type="text" name="name" placeholder="">
+                <label for="name">Name</label>
+            </div>
+            <div class="special_input">
+                <input type="text" name="lastname" placeholder="">
+                <label for="lastname">Last name</label>
+            </div>
+        </fieldset>
+        <p>Contact data</p>
+        <fieldset>
+            <div class="special_input">
+                <input type="email" name="email" placeholder="">
+                <label for="email">E-Mail</label>
+            </div>
+            <div class="special_input">
+                <input type="tel" name="tel" placeholder="">
+                <label for="tel">Phone number</label>
+            </div>
+        </fieldset>
+        <p>Bio</p>
+        <br>
+        <fieldset>
+            <div class="special_input">
+                <textarea name="textarea" id="" placeholder=""></textarea>
+                <label for="textarea">Message</label>
+            </div>
+        </fieldset>
+        <p>Academic data</p>
+        <fieldset>
+            <div>
+                <label for="date">Birthdate</label>
+                <input type="date" name="date" placeholder="">
+            </div>
+            <div>
+                <label for="gpa">GPA (Grade Point Average)</label>
+                <input type="range" name="gpa" onchange="updateTextInput(this.value);">
+                <label type="text" id="textInput"></label>
+            </div>
+        </fieldset>
+        <label for="radio">Gender</label>
+        <fieldset>
+            <br />
+            <div>
+                <label for="radio">Male: </label>
+                <input type="radio" name="radio" value="f" checked>
+            </div>
+            <div>
+                <label for="radio">Female: </label>
+                <input type="radio" name="radio" value="m">
+            </div>
+            <div>
+                <label for="radio">Genderfluid: </label>
+                <input type="radio" name="radio" value="g">
+            </div>
+            <div>
+                <label for="radio">Nonbinary: </label>
+                <input type="radio" name="radio" value="o">
+            </div>
+        </fieldset>
+        <p>Final steps</p>
+        <fieldset>
+            <div id="terms_container">
+                <label for="terms">Agree to terms</label>
+                <input type="checkbox" name="terms" id="">
+            </div>
+            <div>
+                <label for="file" class="custom_file_label">User profile image</label>
+                <input type="file" name="file" id="file">
+            </div>
+        </fieldset>
+        <fieldset>
+            <input type="submit" name="submit" value="Submit">
+            <input type="reset" name="reset" value="Reset">
+        </fieldset>
+    </form>
+</body>
+
+</html>

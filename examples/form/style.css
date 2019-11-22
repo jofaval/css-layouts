@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+html, body {
+    width: 10+0%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+form {
+    width: 65vw;
+    align-self: center;
+    text-align: center;
+}
+
+fieldset {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /*height: 6rem;*/
+    border: none;
+}
+
+fieldset>* {
+    flex: 50%;
+    margin: 0 5%;
+}
+
+.special_input {
+    display: flex;
+    flex-direction: column-reverse;
+    align-self: center;
+    justify-content: center;
+}
+
+.special_input input {
+    height: 2.5rem;
+    display: block;
+    justify-content: center;
+    align-self: center;
+}
+
+.special_input input:focus, .special_input textarea:focus {
+    border-bottom: 0.5vh solid #9c27b0;
+}
+
+input[type=submit] {
+    height: auto;
+    color: #0e1116;
+}
+
+.special_input textarea+label {
+    margin-top: -2rem;
+}
+
+.special_input input:focus+label, .special_input input:not(:placeholder-shown)+label {
+    margin-top: -4rem;
+    color: #0e1116;
+}
+
+.special_input label {
+    position: absolute;
+    display: block;
+    padding: 0 0 0 0.5rem;
+    color: rgba(14, 17, 22, 0.5);
+    margin-top: 0;
+}
+
+.special_input textarea:focus+label, .special_input textarea:not(:placeholder-shown)+label {
+    margin-top: -6rem;
+    color: #0e1116;
+}
+
+input[type=text], input[type=tel], input[type=number], input[type=email], input[type=password], input[type=submit], input[type=date], input[type=reset], textarea {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 1vh 0 1vh 0;
+    border: 0.25vh solid #00000040;
+    padding: 0 0 0 0.5rem;
+    min-height: 2.5rem;
+}
+
+textarea {
+    resize: none;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 0.5rem;
+}
+
+input[type=submit], input[type=reset], button, a.button {
+    cursor: pointer;
+    background: linear-gradient(to right, #f44336, #9c27b0);
+    border: none;
+    outline: none;
+    text-align: center;
+    color: #0e1116;
+    font-weight: bold;
+    padding: 2.5vh 5vw;
+    border-radius: 1vh 0 1vh 0;
+    text-transform: uppercase;
+}
+
+input[type=submit]:hover, input[type=reset]:hover, button:hover, a.button:hover {
+    color: #fff;
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    width: 2.5vh;
+    height: 2.5vh;
+    background-color: rgb(235, 235, 235);
+}
+
+input[type=checkbox]:checked {
+    background-color: rgb(180, 180, 180);
+}
+
+input[type=file] {
+    /*-webkit-appearance: none;
+            border: 1px solid #ccc;
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;*/
+    display: none;
+}
+
+.custom_file_label {
+    -webkit-appearance: none;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+input[type=range]:hover {
+    opacity: 1;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: rgb(219, 0, 84);
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: rgb(219, 0, 84);
+    cursor: pointer;
+}
+
+#terms_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,143 @@
+.content {
+    /*background: rgba(244, 67, 54, 1);
+    background: -moz-linear-gradient(-45deg, rgba(244, 67, 54, 1) 0%, rgba(233, 30, 99, 1) 50%, rgba(156, 39, 176, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(244, 67, 54, 1)), color-stop(50%, rgba(233, 30, 99, 1)), color-stop(100%, rgba(156, 39, 176, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(244, 67, 54, 1) 0%, rgba(233, 30, 99, 1) 50%, rgba(156, 39, 176, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(244, 67, 54, 1) 0%, rgba(233, 30, 99, 1) 50%, rgba(156, 39, 176, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(244, 67, 54, 1) 0%, rgba(233, 30, 99, 1) 50%, rgba(156, 39, 176, 1) 100%);
+    background: linear-gradient(135deg, rgba(244, 67, 54, 1) 0%, rgba(233, 30, 99, 1) 50%, rgba(156, 39, 176, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f44336', endColorstr='#9c27b0', GradientType=1);*/
+    display: flex;
+    padding: 0;
+}
+
+section {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    /*background-color: gray;*/
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+.element {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+}
+
+/*.element:nth-child(odd) {
+    background-color: orange;
+}
+
+
+.element:nth-child(even) {
+    background-color: red;
+}*/
+
+.arr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 15%;
+    height: 100%;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+.arr button {
+    background: transparent;
+}
+
+.element section {
+    flex: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element section div {
+    max-width: 75%;
+}
+
+/*.header {
+    animation: changingBackground 5s infinite;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+}*/
+
+.header img:nth-child(1) {
+    animation: vanish 5s infinite;
+    animation-delay: 0s;
+}
+
+@keyframes vanish {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0.1;
+    }
+}
+
+/*@keyframes changingBackground {
+    0% {
+        background: url('../img/cover/box_model.jpeg');
+        opacity: 1;
+        filter: blur(0vh);
+    }
+    /*8.5% {
+        filter: blur(2.5vh);
+    }
+    17% {
+        background: url('../img/cover/css_grid.jpeg');
+        opacity: 1;
+        filter: blur(0vh);
+    }
+    /*25.5% {
+        filter: blur(2.5vh);
+    }
+    34% {
+        background: url('../img/cover/flexbox.jpeg');
+        opacity: 1;
+        filter: blur(0vh);
+    }
+    /*42.5% {
+        filter: blur(2.5vh);
+    }
+    51% {
+        background: url('../img/cover/forms.jpeg');
+        opacity: 1;
+        filter: blur(0vh);
+    }
+    /*59.5% {
+        filter: blur(2.5vh);
+    }
+    68% {
+        background: url('../img/cover/menu.jpeg');
+        opacity: 1;
+        filter: blur(0vh);
+    }
+    /*76.5% {
+        filter: blur(2.5vh);
+    }
+    85% {
+        background: url('../img/cover/responsive.jpeg');
+        opacity: 1;
+        filter: blur(0vh);
+    }
+    /*93.5% {
+        filter: blur(2.5vh);
+    }
+    100% {
+        background: url('../img/cover/selectors.jpeg');
+        opacity: 1;
+        filter: blur(0vh);
+    }
+}*/

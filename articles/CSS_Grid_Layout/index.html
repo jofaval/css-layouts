@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LearnIt - CSS Grid Layout</title>
+    <link rel="stylesheet" href="../../styles/main_style.css">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../img/favicon.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../../scripts/js/script.js"></script>
+</head>
+
+<body>
+    <aside class="advertisement">
+        <p class="advertisement_arrow">&lt;</p>
+        <a href="https://www.cocacola.com">
+            <img src="https://carbonmade-media.accelerator.net/37503708;640x256.jpeg" alt="">
+        </a>
+    </aside>
+    <header class="menu">
+        <!--#logo+.options+#search_bar_holder>input#search_bar+input:submit-->
+        <div id="logo">
+            <a href="../../index.html">
+                <span>l</span>
+                <span>e</span>
+                <span>a</span>
+                <span>r</span>
+                <span>n</span>
+                <span>.</span>
+                <span>i</span>
+                <span>t</span>
+            </a>
+        </div>
+        <div class="options">
+            <div class="dropdown">
+                <a class="button" href="../../index.html">
+                    <i class="icon fa fa-home"></i>
+                    <div class="label">
+                        home
+                    </div>
+                </a>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="../index.html">
+                    <i class="icon fa fa-file-o"></i>
+                    <div class="label">
+                        articles
+                    </div>
+                </a>
+                <ul class="dropdown_content">
+                    <div class="dropdown">
+                        <a href="" class="button">
+                            <li>CSS Layouts</li>
+                        </a>
+                        <ul class="dropdown_content">
+                            <a href="../../articles/CSS_Grid_Layout/index.html" class="button">
+                                <li>CSS Grid Layout</li>
+                            </a>
+                            <a href="../../articles/Flexbox/index.html" class="button">
+                                <li>Flexbox</li>
+                            </a>
+                            <a href="../../articles/Responsive/index.html" class="button">
+                                <li>Responsive Layout</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a href="" class="button">
+                            <li>Basic CSS</li>
+                        </a>
+                        <ul class="dropdown_content">
+                            <a href="../../articles/Box_Model/index.html" class="button">
+                                <li>Box Model</li>
+                            </a>
+                            <a href="../../articles/Selectors/index.html" class="button">
+                                <li>Selectors</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a href="" class="button">
+                            <li>Complex HTML components</li>
+                        </a>
+                        <ul class="dropdown_content">
+                            <a href="../../articles/Forms/index.html" class="button">
+                                <li>Forms</li>
+                            </a>
+                            <a href="../../articles/Menu/index.html" class="button">
+                                <li>Menu</li>
+                            </a>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="../../projects/index.html">
+                    <i class="icon fa fa-code"></i>
+                    <div class="label">
+                        projects
+                    </div>
+                </a>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="../../contact/index.html">
+                    <i class="icon fa fa-user"></i>
+                    <div class="label">
+                        contact
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="search_bar_holder">
+            <form action="../../scripts/php/search.php" method="POST">
+                <input type="text" name="search_bar" id="search_bar" placeholder="Float layout">
+                <button type="submit" value="">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <div id="menu_button">
+            <button>
+                <i class="icon fa fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <main>
+        <aside class="index">
+            <!--ul>a{Título $}*5>li-->
+            <div class="index_container">
+                <a href="#title_1">CSS Grid Layout</a>
+            </div>
+            <div class="index_container">
+                <a href="#area">Area</a>
+            </div>
+            <div class="index_container">
+                <a href="#understanding">Understanding concepts</a>
+            </div>
+            <div class="index_container">
+                <a href="#lines">Lines</a>
+            </div>
+            <div class="index_container no_border">
+                <a href="#example">Example</a>
+            </div>
+        </aside>
+        <div class="header">
+            <img src="../../img/cover/css_grid.jpeg">
+        </div>
+        <div class="content">
+            <article>
+                <br />
+                <h1 id="title_1">CSS Grid Layout</h1>
+                <h4>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it
+                    easier to design web pages without having to use floats and positioning.</h4>
+                <br />
+                <br>
+                <button onclick="goToURL('../../examples/css_grid/index.html')"
+                    onauxclick="goToURL('../../examples/css_grid/index.html')">View live</button>
+                <button onclick="goToURL('https:/\/codepen.io/r4pepe/pen/LYYapQW')"
+                    onauxclick="goToURL('https:/\/codepen.io/r4pepe/pen/LYYapQW')">View Demo</button>
+                <br>
+                <br>
+                <p>To make it work we need to add <span class="element">display: grid;</span> to the container.</p>
+                <br>
+                <p>In CSS Grid we can create layouts in two main ways, using:
+                    <ul>
+                        <li><span class="element"><a href="#area">area</a></span>: we create boxes and a layout
+                            organized by areas</li>
+                        <li><span class="element"><a href="#lines">lines</a></span>: a grid item is defined by having a
+                            line on each side of the box</li>
+                    </ul>
+                </p>
+                <br>
+                <h2 id="area">Area</h2>
+                <br>
+                <p>This is the easier way and one where you can change it in the future without getting a headache</p>
+                <p>On the container we can use:
+                    <ul>
+                        <li><span class="element">grid-template-areas</span>: to indicate the <span
+                                class="element">layout</span>, explained later</li>
+                        <li><span class="element">grid-template-columns</span>: using units how many space will take
+                            each <span class="element">column</span></li>
+                        <li><span class="element">grid-template-rows</span>: using units how many space will take each
+                            <span class="element">row</span></li>
+                    </ul>
+                </p>
+                <p>These properties can take any measure unit than most properties can in CSS, but the most used ones
+                    are, <span class="element">auto</span> and <span class="element">fr</span> (which is exclusive of
+                    grid), the latter one takes fractions of the overall size, for example, if the width was 1000px, and
+                    we had three elements, 1fr would be 333px</p>
+                <br>
+                <br>
+                <h3 id="understanding">Understanding concepts</h3>
+                <br>
+                <p><span class="element">Grid-template-area</span>: You create a layout with as many rows andd cols you
+                    feel like but, as the footer,
+                    if an element has to take the rest of the space you must repeate the area name</p>
+                <p><span class="element">Grid-template-columns</span> and <span
+                        class="element">grid-template-rows</span>: for these properties, you must have as many values
+                    for
+                    as many rows and cols you have, and take a note that, auto will take the surplus space while fr will
+                    take from it's element asignation how many you say. Every fr value will share a correlation, each
+                    will take space from the other. Also worth noting, header and footer should have fixed units so they
+                    don't oversize</p>
+                <br>
+                <br>
+                <iframe height="265" style="width: 100%;" scrolling="no" title="Grid-Template Playtest"
+                    src="https://codepen.io/r4pepe/embed/RwwdVdG?height=265&theme-id=default&default-tab=css,result"
+                    frameborder="no" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href='https://codepen.io/r4pepe/pen/RwwdVdG'>Grid-Template Playtest</a> by Pepe
+                    (<a href='https://codepen.io/r4pepe'>@r4pepe</a>) on <a href='https://codepen.io'>CodePen</a>.
+                </iframe>
+                <br>
+                <br>
+                <h2 id="lines">Lines</h2>
+                <p>As previously mentioned, each box within a grid has one line on each side, starting from 1, thus if
+                    we make a grid that's 2x2, we'll have: <br>
+                    (rowNum: 1[element]colNum: 2[element]colNum: 3)<br>
+                    (rowNum: 2[element]colNum: 2[element]colNum: 3)<br>
+                    <br>
+                    To specify this, we make use of:
+                    <ul>
+                        <li><span class="element">grid-column-start</span>: starting at column line <b>n</b></li>
+                        <li><span class="element">grid-column-end</span>: ending at column line <b>n</b></li>
+                        <li><span class="element">grid-row-start</span>: starting at row line <b>n</b></li>
+                        <li><span class="element">grid-row-end</span>: ending at row line <b>n</b></li>
+                    </ul>
+                </p>
+                <br><br>
+                <iframe height="265" style="width: 100%;" scrolling="no" title="wvvOeGm"
+                    src="https://codepen.io/r4pepe/embed/wvvOeGm?height=265&theme-id=default&default-tab=css,result"
+                    frameborder="no" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href='https://codepen.io/r4pepe/pen/wvvOeGm'>wvvOeGm</a> by Pepe
+                    (<a href='https://codepen.io/r4pepe'>@r4pepe</a>) on <a href='https://codepen.io'>CodePen</a>.
+                </iframe>
+                <br><br>
+                <h2 id="example">Example</h2>
+                <br>
+                <br>
+                <iframe height="265" style="width: 100%;" scrolling="no" title="CSS Grid Layout Example"
+                    src="https://codepen.io/r4pepe/embed/LYYapQW?height=265&theme-id=default&default-tab=css,result"
+                    frameborder="no" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href='https://codepen.io/r4pepe/pen/LYYapQW'>CSS Grid Layout Example</a> by Pepe
+                    (<a href='https://codepen.io/r4pepe'>@r4pepe</a>) on <a href='https://codepen.io'>CodePen</a>.
+                </iframe>
+                <br>
+                <br>
+                <br>
+                <br>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="social_networks">
+
+            <a href="https://www.twitter.com/learn_it">
+                <i class="fa fa-twitter"></i>
+                <p>Twitter</p>
+            </a>
+            <a href="https://www.instagram.com/learn_it">
+                <i class="fa fa-instagram"></i>
+                <p>Instagram</p>
+            </a>
+            <a href="https://www.codepen.com/learn_it">
+                <i class="fa fa-codepen"></i>
+                <p>Code Pen</p>
+            </a>
+            <a href="https://www.facebook.com/learn_it">
+                <i class="fa fa-facebook"></i>
+                <p>Facebook</p>
+            </a>
+        </div>
+        <div class="copy">
+            Pepe Fabra Valverde &copy;2019&nbsp;
+        </div>
+    </footer>
+</body>
+
+</html>

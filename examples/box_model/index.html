@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box Model Example</title>
+    <script>
+        window.onload = () => {
+            document.getElementById("btnChangeBoxSizing").onclick = () => {
+                var selectBox = document.getElementById("cmbChangeBoxSizing");
+                var selectedValue = selectBox.options[cmbChangeBoxSizing.selectedIndex].value;
+                document.getElementById("boxElement").style.boxSizing = selectedValue;
+            };
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <table>
+            <theader>
+                <tr>
+                    <td>Element: </td>
+                    <td>Margin</td>
+                    <td>Border</td>
+                    <td>Padding</td>
+                    <td>Content</td>
+                    <td>
+                        <select id="cmbChangeBoxSizing">
+                            <option value="border-box">Border-box</option>
+                            <option value="content-box">Content-box</option>
+                            <option value="initial">Initial</option>
+                            <option value="unset">Unset</option>
+                        </select>
+                    </td>
+                </tr>
+            </theader>
+            <tbody>
+                <tr>
+                    <td>Color: </td>
+                    <td style="background-color: var(--margin);"></td>
+                    <td style="background-color: var(--border);"></td>
+                    <td style="background-color: var(--padding);"></td>
+                    <td style="background-color: var(--content);"></td>
+                    <td>
+                        <button id="btnChangeBoxSizing">Change box sizing</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </header>
+    <div class="container">
+        <div id="boxElement">
+            <p>CONTENT</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LearnIt - Selectors</title>
+    <link rel="stylesheet" href="../../styles/main_style.css">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../img/favicon.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../../scripts/js/script.js"></script>
+    <link rel="stylesheet" href="../styles/articles.css">
+</head>
+
+<body>
+    <aside class="advertisement">
+        <p class="advertisement_arrow">&lt;</p>
+        <a href="https://www.cocacola.com">
+            <img src="https://carbonmade-media.accelerator.net/37503708;640x256.jpeg" alt="">
+        </a>
+    </aside>
+    <header class="menu">
+        <!--#logo+.options+#search_bar_holder>input#search_bar+input:submit-->
+        <div id="logo">
+            <a href="../../index.html">
+                <span>l</span>
+                <span>e</span>
+                <span>a</span>
+                <span>r</span>
+                <span>n</span>
+                <span>.</span>
+                <span>i</span>
+                <span>t</span>
+            </a>
+        </div>
+        <div class="options">
+            <div class="dropdown">
+                <a class="button" href="../../index.html">
+                    <i class="icon fa fa-home"></i>
+                    <div class="label">
+                        home
+                    </div>
+                </a>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="../index.html">
+                    <i class="icon fa fa-file-o"></i>
+                    <div class="label">
+                        articles
+                    </div>
+                </a>
+                <ul class="dropdown_content">
+                    <div class="dropdown">
+                        <a href="" class="button">
+                            <li>CSS Layouts</li>
+                        </a>
+                        <ul class="dropdown_content">
+                            <a href="../../articles/CSS_Grid_Layout/index.html" class="button">
+                                <li>CSS Grid Layout</li>
+                            </a>
+                            <a href="../../articles/Flexbox/index.html" class="button">
+                                <li>Flexbox</li>
+                            </a>
+                            <a href="../../articles/Responsive/index.html" class="button">
+                                <li>Responsive Layout</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a href="" class="button">
+                            <li>Basic CSS</li>
+                        </a>
+                        <ul class="dropdown_content">
+                            <a href="../../articles/Box_Model/index.html" class="button">
+                                <li>Box Model</li>
+                            </a>
+                            <a href="../../articles/Selectors/index.html" class="button">
+                                <li>Selectors</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a href="" class="button">
+                            <li>Complex HTML components</li>
+                        </a>
+                        <ul class="dropdown_content">
+                            <a href="../../articles/Forms/index.html" class="button">
+                                <li>Forms</li>
+                            </a>
+                            <a href="../../articles/Menu/index.html" class="button">
+                                <li>Menu</li>
+                            </a>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="../../projects/index.html">
+                    <i class="icon fa fa-code"></i>
+                    <div class="label">
+                        projects
+                    </div>
+                </a>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="../../contact/index.html">
+                    <i class="icon fa fa-user"></i>
+                    <div class="label">
+                        contact
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="search_bar_holder">
+            <form action="../../scripts/php/search.php" method="POST">
+                <input type="text" name="search_bar" id="search_bar" placeholder="Float layout">
+                <button type="submit" value="">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <div id="menu_button">
+            <button>
+                <i class="icon fa fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <main>
+        <aside class="index">
+            <!--ul>a{Título $}*5>li-->
+            <div class="index_container">
+                <a href="#selectors">Selectors</a>
+            </div>
+            <div class="index_container">
+                <a href="#examples">Selector examples</a>
+            </div>
+            <div class="index_container">
+                <a href="#space">Space Selector</a>
+            </div>
+            <div class="index_container">
+                <a href="#child">Child Selector</a>
+            </div>
+            <div class="index_container">
+                <a href="#adjacent">Adjacent Selector</a>
+            </div>
+            <div class="index_container">
+                <a href="#general">General Sibling Selector</a>
+            </div>
+            <div class="index_container">
+                <a href="#class">Class Selector</a>
+            </div>
+            <div class="index_container">
+                <a href="#id">ID Selector</a>
+            </div>
+            <div class="index_container">
+                <a href="#universal">Universal Selector</a>
+            </div>
+            <div class="index_container">
+                <a href="#specificity">Specificity</a>
+            </div>
+        </aside>
+        <div class="header">
+            <img src="https://picsum.photos/1600/180?random=1">
+        </div>
+        <div class="content">
+            <article>
+                <br />
+                <h1 id="title_1">CSS Selectors</h1>
+                <h4>Before adding any <span class="element">css style</span> we must select the items that are going to
+                    get affected, this article
+                    provides the information about how to select the elements we want.</h4>
+                <br />
+                <br>
+                <button onclick="goToURL('../../examples/selectors/index.html')"
+                    onauxclick="goToURL('../../examples/selectors/index.html')">View live</button>
+                <br>
+                <br>
+                <br>
+                <h2 id="selectors">Selectors</h2>
+                <br>
+                <br>
+                <ul>
+                    <li><span class="element">(space)</span>: descendant selector, not direct child but child of the
+                        previous element</li>
+                    <li><span class="element">(>)</span>: child selector, direct child of the previous element</li>
+                    <li><span class="element">(+)</span>: adjacent sibling selector, the next element that is at the
+                        same level that the previous element</li>
+                    <li><span class="element">(~)</span>: general sibling selector, an element which is at the same
+                        level than the previous element</li>
+                    <li><span class="element">(.)</span>: class selector, selects all HTML elements that share the same
+                        class</li>
+                    <li><span class="element">(#)</span>: id selector, selects the only element in the document with the
+                        id set to that value</li>
+                    <li><span class="element">(*)</span>: universal selector, selects every element in the document</li>
+                </ul>
+                <br>
+                <br>
+                <h2 id="examples">Selector examples</h2>
+                <br>
+                <h3 id="space">Space Selector</h3>
+                <br>
+                <p>CSS</p>
+                <pre>element element { background: black; }</pre>
+                <br>
+                <p>HTML</p>
+                <pre>
+    &lt;element&gt;
+        &lt;notElement&gt;
+            <b>&lt;element&gt;</b>
+        &lt;/notElement&gt;
+    &lt;/element&gt;</pre>
+
+                <br>
+                <h3 id="child">Child Selector</h3>
+                <br>
+                <p>CSS</p>
+                <pre>element > element { background: black; }</pre>
+                <br>
+                <p>HTML</p>
+                <pre>
+    &lt;element&gt;
+        <b>&lt;element&gt;</b>
+    &lt;/element&gt;</pre>
+
+                <br>
+                <h3 id="adjacent">Adjacent Selector</h3>
+                <br>
+                <p>CSS</p>
+                <pre>element + element { background: black; }</pre>
+                <br>
+                <p>HTML</p>
+                <pre>
+    &lt;element&gt;
+        &lt;element&gt;
+        <b>&lt;element&gt;</b>
+    &lt;/element&gt;</pre>
+
+                <br>
+                <h3 id="general">General Sibling Selector</h3>
+                <br>
+                <p>CSS</p>
+                <pre>element ~ sibling { background: black; }</pre>
+                <br>
+                <p>HTML</p>
+                <pre>
+    &lt;element&gt;
+        <b>&lt;sibling&gt;</b>
+        &lt;element&gt;
+        <b>&lt;sibling&gt;</b>
+        <b>&lt;sibling&gt;</b>
+    &lt;/element&gt;</pre>
+
+                <br>
+                <h3 id="class">Class Selector</h3>
+                <br>
+                <p>CSS</p>
+                <pre>.element { background: black; }</pre>
+                <br>
+                <p>HTML</p>
+                <pre>
+    <b>&lt;element class="element"&gt;&lt;/element&gt;</b>
+    &lt;element&gt;&lt;/element&gt;</pre>
+                <br>
+                <h3 id="id">ID Selector</h3>
+                <br>
+                <p>CSS</p>
+                <pre>#element { background: black; }</pre>
+                <br>
+                <p>HTML</p>
+                <pre>
+<b>&lt;element id="element"&gt;&lt;/element&gt;</b>
+&lt;element&gt;&lt;/element&gt;</pre>
+                <br>
+
+                <br>
+                <h3 id="universal">Universal Selector</h3>
+                <br>
+                <p>CSS</p>
+                <pre>* { background: black; }</pre>
+                <br>
+                <p>HTML</p>
+                <pre>
+<b>&lt;element id="element"&gt;&lt;/element&gt;</b>
+<b>&lt;element class="element"&gt;&lt;/element&gt;</b></pre>
+                <br>
+                <br>
+                <h2 id="specificity">Specificity</h2>
+                <ul>
+                    <li><span class="element">style attribute</span>: <span class="element">HTML</span> attribute to add
+                        on the <span class="element">HTML</span> tag, 1000 points</li>
+                    <li><span class="element">id</span>: <span class="element">HTML</span> attribute to uniquely
+                        identify <b>one</b> element, 100 point per iteration</li>
+                    <li><span class="element">Class</span>: <span class="element">HTML</span> attribute to group one or
+                        more <span class="element">HTML</span> elements, 10 point per iteration</li>
+                    <li><span class="element">pseudo-class</span>: action/behaviour of an element such as <span
+                            class="element">:hover</span>, 100100 point per iteration</li>
+                    <li><span class="element">attribute</span>: an <span class="element">HTML</span> attribute that adds
+                        some information like <span class="element">input[type="submit"]</span>, 10 point per iteration
+                    </li>
+                    <li><span class="element">elements</span>: an <span class="element">HTML5</span> element, 1 point
+                        per iteration
+                    </li>
+                    <li><span class="element">pseudo-elements</span>: a custom <span class="element">HTML</span> element
+                        made by the user, 1 points</li>
+                </ul>
+                <br><br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <div class="social_networks">
+
+            <a href="https://www.twitter.com/learn_it">
+                <i class="fa fa-twitter"></i>
+                <p>Twitter</p>
+            </a>
+            <a href="https://www.instagram.com/learn_it">
+                <i class="fa fa-instagram"></i>
+                <p>Instagram</p>
+            </a>
+            <a href="https://www.codepen.com/learn_it">
+                <i class="fa fa-codepen"></i>
+                <p>Code Pen</p>
+            </a>
+            <a href="https://www.facebook.com/learn_it">
+                <i class="fa fa-facebook"></i>
+                <p>Facebook</p>
+            </a>
+        </div>
+        <div class="copy">
+            Pepe Fabra Valverde &copy;2019&nbsp;
+        </div>
+    </footer>
+</body>
+
+</html>

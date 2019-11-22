@@ -1,0 +1,103 @@
+.content {
+    display: flex;
+    padding: 5vh 5vw;
+    justify-items: center;
+    align-content: center;
+}
+
+.content input,
+.content textarea {
+    text-align-last: left;
+}
+
+form>div {
+    display: block;
+}
+
+main {
+    grid-template-areas: "content";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+}
+
+.content form {
+    flex: auto;
+    align-self: center;
+    width: 50%;
+    height: auto;
+    margin: 5vh 25%;
+}
+
+.special_input {
+    align-self: center;
+    justify-content: center;
+}
+
+.special_input input {
+    height: 2.5rem;
+    display: block;
+    justify-content: center;
+    align-self: center;
+}
+
+.special_input input:focus,
+.special_input textarea:focus {
+    border-bottom: 0.5vh solid #9c27b0;
+}
+
+input[type=text] {
+    width: 90%;
+    align-self: center;
+}
+
+input[type=email] {
+    width: 100%;
+}
+
+input[type=submit] {
+    height: auto;
+    color: #0e1116;
+}
+
+.special_input label {
+    position: absolute;
+    display: block;
+    margin-top: -1.9rem;
+    padding: 0 0 0 0.5rem;
+    color: rgba(14, 17, 22, 0.5);
+}
+
+.special_input input:focus+label,
+.special_input input:not(:placeholder-shown)+label {
+    margin-top: -4rem;
+    color: #0e1116;
+}
+
+.special_input textarea+label {
+    margin-top: -9.5rem;
+}
+
+.special_input textarea:not(:placeholder-shown)+label,
+.special_input textarea:focus+label {
+    margin-top: -11.5rem;
+    color: #0e1116;
+}
+
+#message {
+    width: 100%;
+    height: 10rem;
+}
+
+.horizontal_align {
+    width: 95%;
+    margin-left: 5%;
+}
+
+@media screen and (max-width: 800px) {
+    .content form {
+        flex: auto;
+        align-self: center;
+        width: auto;
+        margin: 0 5%;
+    }
+}

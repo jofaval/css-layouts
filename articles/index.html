@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LearnIt - Articles</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+    <link rel="stylesheet" href="../styles/articles.css">
+    <link rel="stylesheet" href="./styles/articles.css">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../img/favicon.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../scripts/js/script.js"></script>
+</head>
+
+<body>
+    <aside class="advertisement">
+        <p class="advertisement_arrow">&lt;</p>
+        <a href="https://www.cocacola.com">
+            <img src="https://carbonmade-media.accelerator.net/37503708;640x256.jpeg" alt="">
+        </a>
+    </aside>
+    <header class="menu">
+        <!--#logo+.options+#search_bar_holder>input#search_bar+input:submit-->
+        <div id="logo">
+            <a href="../index.html">
+                <span>l</span>
+                <span>e</span>
+                <span>a</span>
+                <span>r</span>
+                <span>n</span>
+                <span>.</span>
+                <span>i</span>
+                <span>t</span>
+            </a>
+        </div>
+        <div class="options">
+            <div class="dropdown">
+                <a class="button" href="../index.html">
+                    <i class="icon fa fa-home"></i>
+                    <div class="label">
+                        home
+                    </div>
+                </a>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="./index.html">
+                    <i class="icon fa fa-file-o"></i>
+                    <div class="label">
+                        articles
+                    </div>
+                </a>
+                <ul class="dropdown_content">
+                    <div class="dropdown">
+                        <a href="" class="button">
+                            <li>CSS Layouts</li>
+                        </a>
+                        <ul class="dropdown_content">
+                            <a href="./CSS_Grid_Layout/index.html" class="button">
+                                <li>CSS Grid Layout</li>
+                            </a>
+                            <a href="./Flexbox/index.html" class="button">
+                                <li>Flexbox</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <a href="Dolor sit amet" class="button">
+                        <li>Lorem ipsum</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="../projects/index.html">
+                    <i class="icon fa fa-code"></i>
+                    <div class="label">
+                        projects
+                    </div>
+                </a>
+            </div>
+            <div class="dropdown">
+                <a class="button" href="../contact/index.html">
+                    <i class="icon fa fa-user"></i>
+                    <div class="label">
+                        contact
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div id="search_bar_holder">
+            <form action="../scripts/php/search.php" method="POST">
+                <input type="text" name="search_bar" id="search_bar" placeholder="Float layout">
+                <button type="submit" value="">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <div id="menu_button">
+            <button>
+                <i class="icon fa fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <!--.showcase_article*7>img.thumbnail[src="https://picsum.photos/600/180?random=$"]+.description>h2{Title}+p+a{Read more...}-->
+            <div class="showcase_article">
+                <img src="../img/cover/box_model.jpeg" alt="Not available" class="thumbnail">
+                <div class="description">
+                    <h2>Box Model</h2>
+                    <p>All HTML elements can be considered as boxes. In CSS, the term <span class="element">box
+                            model</span> is used when talking about design and layout.</p>
+                    <a href="./Box_Model/index.html">Read more...</a>
+                </div>
+            </div>
+            <div class="showcase_article">
+                <img src="../img/cover/selectors.jpeg" alt="Not available" class="thumbnail">
+                <div class="description">
+                    <h2>Selectors</h2>
+                    <p>Before adding any <span class="element">css style</span> we must select the items that are going
+                        to
+                        get affected, this article
+                        provides the information about how to select the elements we want.</p>
+                    <a href="./Selectors/index.html">Read more...</a>
+                </div>
+            </div>
+            <div class="showcase_article">
+                <img src="../img/cover/flexbox.jpeg" alt="Not available" class="thumbnail">
+                <div class="description">
+                    <h2>Flexbox Layout</h2>
+                    <p>CSS Flexbox is an adaptable resource that works in an unidimensional way by default, there're
+                        ways
+                        to simulate bidimensionality.</p>
+                    <a href="./Flexbox/index.html">Read more...</a>
+                </div>
+            </div>
+            <div class="showcase_article">
+                <img src="../img/cover/css_grid.jpeg" alt="Not available" class="thumbnail">
+                <div class="description">
+                    <h2>CSS Grid Layout</h2>
+                    <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns.
+                    </p>
+                    <a href="./CSS_Grid_Layout/index.html">Read more...</a>
+                </div>
+            </div>
+            <div class="showcase_article">
+                <img src="../img/cover/responsive.jpeg" alt="Not available" class="thumbnail">
+                <div class="description">
+                    <h2>Responsive with CSS Grid</h2>
+                    <p>Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or
+                        enlarge, a website, to make it look good on all devices.</p>
+                    <a href="./Responsive/index.html">Read more...</a>
+                </div>
+            </div>
+            <div class="showcase_article">
+                <img src="../img/cover/forms.jpeg" alt="Not available" class="thumbnail">
+                <div class="description">
+                    <h2>Forms</h2>
+                    <p>A form is an HTML element that is used to collect user input</p>
+                    <a href="./Forms/index.html">Read more...</a>
+                </div>
+            </div>
+            <div class="showcase_article">
+                <img src="../img/cover/menu.jpeg" alt="Not available" class="thumbnail">
+                <div class="description">
+                    <h2>Menu</h2>
+                    <p>A menu is a collection of links that provides the user with a navigation guide</p>
+                    <a href="./Menu/index.html">Read more...</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social_networks">
+
+            <a href="https://www.twitter.com/learn_it">
+                <i class="fa fa-twitter"></i>
+                <p>Twitter</p>
+            </a>
+            <a href="https://www.instagram.com/learn_it">
+                <i class="fa fa-instagram"></i>
+                <p>Instagram</p>
+            </a>
+            <a href="https://www.codepen.com/learn_it">
+                <i class="fa fa-codepen"></i>
+                <p>Code Pen</p>
+            </a>
+            <a href="https://www.facebook.com/learn_it">
+                <i class="fa fa-facebook"></i>
+                <p>Facebook</p>
+            </a>
+        </div>
+        <div class="copy">
+            Pepe Fabra Valverde &copy;2019&nbsp;
+        </div>
+    </footer>
+</body>
+
+</html>
