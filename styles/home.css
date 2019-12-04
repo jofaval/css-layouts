@@ -29,6 +29,7 @@ section {
     height: 100%;
 }
 
+
 /*.element:nth-child(odd) {
     background-color: orange;
 }
@@ -61,9 +62,11 @@ section {
     align-items: center;
 }
 
-.element section div {
+.element section>div {
     max-width: 75%;
+    width: 75%;
 }
+
 
 /*.header {
     animation: changingBackground 5s infinite;
@@ -85,6 +88,7 @@ section {
         opacity: 0.1;
     }
 }
+
 
 /*@keyframes changingBackground {
     0% {
@@ -141,3 +145,15 @@ section {
         filter: blur(0vh);
     }
 }*/
+
+@media screen and (max-width: 800px) {
+    .arr {
+        flex: 10%;
+    }
+    .element section {
+        flex: 80%;
+    }
+    iframe {
+        height: auto;
+    }
+}

@@ -1,6 +1,7 @@
 var oldScroll = 0;
 
 window.onload = function () {
+    
     //document.body.classList.add("loaded"); //remove preloader
 
     var windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -15,7 +16,8 @@ window.onload = function () {
     var menu_button = document.getElementById("menu_button");
     menu_button.onclick = menuDropDown;
 
-    var menu_button_icon = menu_button.getElementsByClassName("fa")[0];
+    var menu_button_icon = menu_button.getElementsByClassName("icon")[0];
+    
     menu_button_icon.classList.toggle("fa-bars"); //Hamburguer menu icon
     menu_button_icon.classList.toggle("fa-times"); //Close icon
 

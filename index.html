@@ -8,12 +8,19 @@
     <title>LearnIt - Home page</title>
     <link rel="stylesheet" href="styles/main_style.css">
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="img/favicon.png">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/home.css">
     <script src="./scripts/js/script.js"></script>
+    <script src="./scripts/js/audio.js"></script>
+    <script src="./scripts/js/home.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/audio.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.4.6/plyr.css">
+    <link rel="stylesheet" href="./styles/video.css">
 </head>
 
 <body>
+    <audio src="./media/audios/Aretha.mp3" id="bgsound"></audio>
     <aside class="advertisement">
         <p class="advertisement_arrow">&lt;</p>
         <a href="https://www.cocacola.com">
@@ -45,7 +52,7 @@
             </div>
             <div class="dropdown">
                 <a class="button" href="./articles/index.html">
-                    <i class="icon fa fa-file-o"></i>
+                    <i class="icon fa fa-newspaper"></i>
                     <div class="label">
                         articles
                     </div>
@@ -160,10 +167,63 @@
             <div id="slider">
                 <!--(.element#elem_$>a.arr[href=#elem_$]+section+a.arr[href=#elem_$])*5-->
                 <div class="element" id="welcome">
-                    <a href="#get_started" class="arr">&lt;</a>
+                    <a href="#promotional" class="arr">&lt;</a>
                     <section>
                         <div>
                             <h2>Welcome to the page</h2>
+                            <br>
+                            <!--p>Introduction video:</p-->
+                            <!--video controls="" width="360" height="240">
+                                <source src="./media/videos/recetapollo.mp4" type="video/mp4">
+                                <!-- Safari 5 >
+                                <source src="./media/videos/recetapollo.ogv" type="video/ogg; codecs='theora, vorbis'">
+                                <!-- Firefox 5 y Google Chrome º4 >
+                                <source src="./media/videos/recetapollo.webm" type="video/webm">
+                                <!-- Firefox 5 y Google Chrome 14 >
+                                <object type="application/x-shockwave-flash" data="player_flv_maxi.swf" height="240"
+                                    width="360">
+                                    <param name="movie" value="./media/videos/controls/player_flv_maxi.swf">
+                                    <param name="FlashVars" value="flv=./media/videos/recetapollo.flv">
+                                    <embed type="application/x-shockwave-flash" width="360" height="240"
+                                        src="./media/videos/controls/player_flv_maxi.swf"
+                                        flashvars="flv=./media/videos/recetapollo.flv">
+                                    </embed>
+                                </object>
+                            </video-->
+
+                            <!--poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"-->
+                            <video controls playsinline id="player">
+                                <!-- Video files -->
+                                <!--source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+                                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+                                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+                                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440" -->
+
+                                <source src="./media/videos/recetapollo.mp4" type="video/mp4">
+                                <!-- Safari 5 -->
+                                <source src="./media/videos/recetapollo.ogv" type="video/ogg; codecs='theora, vorbis'">
+                                <!-- Firefox 5 y Google Chrome º4 -->
+                                <source src="./media/videos/recetapollo.webm" type="video/webm">
+                                <!-- Firefox 5 y Google Chrome 14 -->
+
+                                <!-- Caption files -->
+                                <!--track kind="captions" label="English" srclang="en"
+                                    src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+                                    default>
+                                <track kind="captions" label="Français" srclang="fr"
+                                    src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt"-->
+
+                                <track kind="captions" label="Español" srclang="es"
+                                    src="./media/videos/recetapollo.es.vtt">
+                                <track kind="captions" label="English" srclang="en" default
+                                    src="./media/videos/recetapollo.en.vtt">
+
+                                <!-- Fallback for browsers that don't support the <video> element -->
+                                <!--a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                                download>Download</a-->
+                                <a href="./media/videos/recetapollo.mp4" download>Download</a>
+                            </video>
+                            <br>
                             <br>
                             <p>Get ready to ready <b>learn it!</b></p>
                         </div>
@@ -176,8 +236,7 @@
                         <div>
                             <h2>Learn it</h2>
                             <br>
-                            <p>Learn it is a website with the focus of teaching CSS, from the basics of how it works to
-                                how to create advanced layouts or styling elements only at specific behaviours</p>
+                            <p>Learn it is a website with the focus of teaching CSS, from the basics of how it works to how to create advanced layouts or styling elements only at specific behaviours</p>
                         </div>
                     </section>
                     <a href="#get_started" class="arr">&gt;</a>
@@ -193,6 +252,59 @@
                             <button onclick="goToURL('./articles/Box_Model/index.html')">Get started!</button>
                         </div>
                     </section>
+                    <a href="#media" class="arr">&gt;</a>
+                </div>
+                <div class="element" id="media">
+                    <a href="#get_started" class="arr">&lt;</a>
+                    <section>
+                        <div>
+                            <h2>Our media</h2>
+                            <br>
+                            <p>Our main theme: </p>
+                            <br>
+                            <!--center>
+                                <audio id="player" src="./media/audios/Aretha.mp3"></audio>
+                                <div class="audio_controls">
+                                    <button onclick="document.getElementById('player').play()">Play</button>
+                                    <button onclick="document.getElementById('player').pause()">Pausa</button>
+                                    <button onclick="document.getElementById('player').volume+=0.1">+
+                                        Volumen</button>
+                                    <button onclick="document.getElementById('player').volume-=0.1">-
+                                        Volumen</button>
+                                </div>
+                            </center-->
+                            <div class="audio">
+                                <audio id="player" src="./media/audios/Aretha.mp3"></audio>
+                                <div class="progress">
+                                    <P id="duration">0:00</P>
+                                    <input type="range" name="lengthBar" id="lengthBar" min="0" value="0" max="100">
+                                    <P id="length">3:43</P>
+                                </div>
+                                <div class="properties">
+                                    <input type="range" name="volume" id="volume" min="0" value="1" step="0.01" max="1" onchange="">
+                                    <button id="mute"><i class="fa fa-volume-mute"></i></button>
+                                    <button id="play"><i class="fa fa-play"></i></button>
+                                    <button id="pause"><i class="fa fa-pause"></i></button>
+                                    <button id="loop"><i class="fa fa-repeat"></i></button>
+                                    <div class="info">Aretha Franklin - I say a little prayer</div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </section>
+                    <a href="#promotional" class="arr">&gt;</a>
+                </div>
+                <div class="element" id="promotional">
+                    <a href="#media" class="arr">&lt;</a>
+                    <section>
+                        <div>
+                            <h2>Promotional video</h2>
+                            <br>
+                            <iframe src="https://player.vimeo.com/video/150584067" width="640" height="358" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            <p><a href="https://vimeo.com/150584067">ZOMBEAVERS. CASTORES ZOMBIES. Tr&aacute;iler</a> from <a href="https://vimeo.com/user14072243">CINEYMAX.COM</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                            <br>
+                        </div>
+                    </section>
                     <a href="#welcome" class="arr">&gt;</a>
                 </div>
             </div>
@@ -201,19 +313,19 @@
     <footer>
         <div class="social_networks">
             <a href="https://www.twitter.com/learn_it">
-                <i class="fa fa-twitter"></i>
+                <i class="fab fa-twitter"></i>
                 <p>Twitter</p>
             </a>
             <a href="https://www.instagram.com/learn_it">
-                <i class="fa fa-instagram"></i>
+                <i class="fab fa-instagram"></i>
                 <p>Instagram</p>
             </a>
             <a href="https://www.codepen.com/learn_it">
-                <i class="fa fa-codepen"></i>
+                <i class="fab fa-codepen"></i>
                 <p>Code Pen</p>
             </a>
             <a href="https://www.facebook.com/learn_it">
-                <i class="fa fa-facebook"></i>
+                <i class="fab fa-facebook"></i>
                 <p>Facebook</p>
             </a>
         </div>
